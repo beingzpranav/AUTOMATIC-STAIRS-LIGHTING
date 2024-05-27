@@ -10,31 +10,32 @@ void setup() {
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
   pinMode(10, OUTPUT);
-  pinMode(11, OUTPUT);
+  
+   pinMode(11, OUTPUT);
 }
 
 void loop() {
   int m = digitalRead(A0); //starting sensor
   int n = digitalRead(A1); //end sensor
 
-  if (m == 0 && n == 1) {
-    for (int i = 2; i <= 11; i++) {
-      digitalWrite(i, HIGH);
-      delay(500);
-    }
-    delay(5);
-    for (int i = 2; i <= 11; i++) {
+  if (m == 1 && n == 0) {
+    for (int i = 1; i <= 11; i++) {
       digitalWrite(i, LOW);
       delay(500);
     }
-  } else if (m == 1 && n == 0) {
-    for (int i = 11; i >= 2; i--) {
+    delay(5);
+    for (int i = 1; i <= 11; i++) {
       digitalWrite(i, HIGH);
       delay(500);
     }
-    delay(5);
-    for (int i = 11; i >= 2; i--) {
+  } else if (m == 0 && n == 1) {
+    for (int i = 11; i >= 1; i--) {
       digitalWrite(i, LOW);
+      delay(500);
+    }
+    delay(5);
+    for (int i = 11; i >= 1; i--) {
+      digitalWrite(i, HIGH);
       delay(500);
     }
   }
