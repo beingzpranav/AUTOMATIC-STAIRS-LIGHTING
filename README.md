@@ -18,4 +18,15 @@ Connecting wires
 
 Contributors:
 
+Pranav Khandelwal 
+
+Rhishikesh Porwal
+
+Prachi Soni
+
+Shreya Singh
+
+Sunidhi
+
+Rohit Bhatia
 
